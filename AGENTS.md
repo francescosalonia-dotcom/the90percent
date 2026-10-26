@@ -34,3 +34,7 @@ A ogni nuova vista: fornire (1) screenshot desktop/mobile o resoconto dei limiti
 - [ ] Mobile 360px senza overflow non intenzionale
 - [ ] Tabella e CSV coerenti con i numeri del grafico
 - [ ] Stati caricamento/vuoto/errore e origine dei dati espliciti
+
+## Canonical project workspace
+- The source of truth for this project is https://github.com/francescosalonia-dotcom/the90percent. Perform project code and design work in this repository, not in the local `The 90%` artifact folder.
+- Before implementation, inspect this repository's current branch and application structure. Do not treat generated local output as source code.
