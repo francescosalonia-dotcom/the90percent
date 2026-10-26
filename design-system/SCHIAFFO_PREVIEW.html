@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#F7F3E8">
+<title>SCHIAFFO — Design system · Punti di Fuga</title>
+<meta name="description" content="Guida interattiva al design system Schiaffo per Punti di Fuga: interfacce, grafici, componenti e rigore data journalism.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* AUTO-GENERATO da tokens.json — non modificare manualmente */
+:root {
+  --sf-color-paper: #F7F3E8;
+  --sf-color-ink: #171719;
+  --sf-color-acid: #E2F33E;
+  --sf-color-orange: #FC5938;
+  --sf-color-ultramarine: #3426C3;
+  --sf-color-white: #FFFFFF;
+  --sf-color-muted: #565654;
+  --sf-color-muted-light: #D7D3C9;
+  --sf-color-surface: #FFFCF3;
+  --sf-color-surface-dark: #252529;
+  --sf-color-border: #171719;
+  --sf-color-data-teal: #006D61;
+  --sf-color-data-purple: #6B3FA0;
+  --sf-color-data-gray: #898781;
+  --sf-color-data-blue: #3426C3;
+  --sf-color-data-orange: #CB3B1C;
+  --sf-color-danger: #AB210F;
+  --sf-color-success: #075E50;
+  --sf-type-display: 'Archivo Black', Impact, 'Arial Black', sans-serif;
+  --sf-type-sans: 'Space Grotesk', Arial, Helvetica, sans-serif;
+  --sf-type-mono: 'DM Mono', 'SFMono-Regular', Consolas, monospace;
+  --sf-type-editorial: Georgia, 'Times New Roman', serif;
+  --sf-font-size-micro: 0.6875rem;
+  --sf-font-size-xs: 0.75rem;
+  --sf-font-size-sm: 0.875rem;
+  --sf-font-size-md: 1rem;
+  --sf-font-size-lg: 1.25rem;
+  --sf-font-size-xl: 1.5rem;
+  --sf-font-size-xxl: 2rem;
+  --sf-font-size-display-sm: clamp(3.2rem, 7.5vw, 6rem);
+  --sf-font-size-display-lg: clamp(4rem, 9vw, 9rem);
+  --sf-space-0: 0;
+  --sf-space-1: 4px;
+  --sf-space-2: 8px;
+  --sf-space-3: 12px;
+  --sf-space-4: 16px;
+  --sf-space-5: 24px;
+  --sf-space-6: 32px;
+  --sf-space-7: 48px;
+  --sf-space-8: 64px;
+  --sf-space-9: 96px;
+  --sf-radius-none: 0;
+  --sf-radius-sm: 2px;
+  --sf-radius-pill: 999px;
+  --sf-stroke-hairline: 1px;
+  --sf-stroke-regular: 2px;
+  --sf-stroke-heavy: 3px;
+  --sf-stroke-hero: 5px;
+  --sf-motion-instant: 0ms;
+  --sf-motion-quick: 120ms;
+  --sf-motion-normal: 220ms;
+  --sf-motion-chart: 360ms;
+  --sf-motion-easing: cubic-bezier(.2,.75,.25,1);
+  --sf-layout-max-width: 1440px;
+  --sf-layout-reading-width: 680px;
+  --sf-layout-chart-min-height: 320px;
+  --sf-layout-touch-target: 44px;
+  --sf-breakpoint-mobile-max: 639px;
+  --sf-breakpoint-tablet-max: 1023px;
+  --sf-breakpoint-desktop-min: 1024px;
+  --sf-semantic-page-bg: var(--sf-color-paper);
+  --sf-semantic-text: var(--sf-color-ink);
+  --sf-semantic-text-muted: var(--sf-color-muted);
+  --sf-semantic-panel-bg: var(--sf-color-surface);
+  --sf-semantic-active-bg: var(--sf-color-acid);
+  --sf-semantic-selected-bg: var(--sf-color-ultramarine);
+  --sf-semantic-annotation: var(--sf-color-data-orange);
+  --sf-semantic-focus-ring: var(--sf-color-ultramarine);
+  --sf-semantic-chart-grid: var(--sf-color-muted-light);
+  --sf-semantic-chart-default: var(--sf-color-data-gray);
+  --sf-semantic-chart-focus: var(--sf-color-ultramarine);
+  --sf-chart-categorical-1: #3426C3;
+  --sf-chart-categorical-2: #CB3B1C;
+  --sf-chart-categorical-3: #006D61;
+  --sf-chart-categorical-4: #6B3FA0;
+  --sf-chart-categorical-5: #171719;
+  --sf-chart-sequential-1: #F1EBD7;
+  --sf-chart-sequential-2: #D4D8BD;
+  --sf-chart-sequential-3: #9EAFA4;
+  --sf-chart-sequential-4: #527D88;
+  --sf-chart-sequential-5: #26268E;
+  --sf-chart-diverging-1: #CB3B1C;
+  --sf-chart-diverging-2: #EEB6A3;
+  --sf-chart-diverging-3: #EEEAE0;
+  --sf-chart-diverging-4: #B0BCF0;
+  --sf-chart-diverging-5: #3426C3;
+  --sf-chart-missing: #C9C6BE;
+  --sf-chart-suppressed: #77736D;
+}
+
+</style>
+<style>
+/* SCHIAFFO / Reusable production-oriented CSS primitives
+   Requires tokens.css. UI overrides belong in host application, not token file. */
+*{box-sizing:border-box}
+:root{font-synthesis:none;text-rendering:optimizeLegibility}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--sf-semantic-page-bg);color:var(--sf-semantic-text);font-family:var(--sf-type-sans);font-size:16px;line-height:1.55}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+a{color:var(--sf-color-ultramarine);text-decoration-thickness:2px;text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--sf-semantic-focus-ring);outline-offset:4px}
+::selection{background:var(--sf-color-acid);color:var(--sf-color-ink)}
+.sf-skip{position:fixed;left:12px;top:-100px;z-index:200;background:var(--sf-color-acid);border:2px solid var(--sf-color-ink);padding:10px 14px}
+.sf-skip:focus{top:12px}
+.sf-container{width:min(var(--sf-layout-max-width),calc(100% - clamp(40px,6vw,96px)));margin-inline:auto}
+.sf-reading{max-width:var(--sf-layout-reading-width)}
+.sf-display{font:900 var(--sf-font-size-display-lg)/.94 var(--sf-type-display);letter-spacing:-.075em;text-transform:uppercase;margin:0}
+.sf-title{font:900 clamp(2.2rem,4vw,4.4rem)/1.05 var(--sf-type-display);letter-spacing:-.055em;text-transform:uppercase}
+.sf-kicker,.sf-meta{font:500 12px/1.45 var(--sf-type-mono);letter-spacing:.075em;text-transform:uppercase}
+.sf-numeric{font-family:var(--sf-type-mono);font-variant-numeric:tabular-nums}
+.sf-section{padding-block:clamp(56px,8vw,118px);border-top:3px solid var(--sf-color-ink)}
+.sf-rule{border:0;border-top:2px solid var(--sf-color-ink);margin:24px 0}
+.sf-surface{background:var(--sf-color-surface);border:2px solid var(--sf-color-ink)}
+.sf-acid{background:var(--sf-color-acid);color:var(--sf-color-ink)}
+.sf-ink{background:var(--sf-color-ink);color:var(--sf-color-paper)}
+.sf-blue{background:var(--sf-color-ultramarine);color:var(--sf-color-white)}
+.sf-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;border:2px solid var(--sf-color-ink);padding:10px 15px;border-radius:var(--sf-radius-none);font-family:var(--sf-type-sans);font-weight:700;font-size:14px;text-decoration:none;line-height:1.2;transition:background var(--sf-motion-quick),transform var(--sf-motion-quick);background:var(--sf-color-surface);color:var(--sf-color-ink)}
+.sf-button:hover:not(:disabled){background:var(--sf-color-acid);transform:translate(-2px,-2px)}
+.sf-button--primary{background:var(--sf-color-ink);color:var(--sf-color-paper)}
+.sf-button--primary:hover:not(:disabled){color:var(--sf-color-ink)}
+.sf-button--acid{background:var(--sf-color-acid);box-shadow:4px 4px 0 var(--sf-color-ink)}
+.sf-button--secondary{background:transparent}
+.sf-button--quiet{border:0;border-bottom:2px solid currentColor;background:transparent;padding-inline:3px;min-height:38px}
+.sf-button:disabled,.sf-button[aria-disabled="true"]{cursor:not-allowed;opacity:.45;transform:none}
+.sf-pill{border:2px solid var(--sf-color-ink);background:transparent;color:var(--sf-color-ink);border-radius:0;min-height:44px;padding:8px 12px;font-weight:700;letter-spacing:0}
+.sf-pill[aria-pressed="true"],.sf-pill.is-active{background:var(--sf-color-ultramarine);color:var(--sf-color-white)}
+.sf-pill:disabled{opacity:.45;cursor:not-allowed}
+.sf-toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.sf-input,.sf-select{min-height:44px;border:2px solid var(--sf-color-ink);border-radius:0;color:var(--sf-color-ink);background:var(--sf-color-surface);padding:8px 12px;max-width:100%}
+.sf-control{display:grid;gap:5px}
+.sf-control-label{font:500 12px/1.4 var(--sf-type-mono);text-transform:uppercase}
+.sf-sticker{display:inline-block;transform:rotate(-4deg);padding:9px 12px;border:2px solid var(--sf-color-ink);background:var(--sf-color-acid);font:500 12px var(--sf-type-mono);text-transform:uppercase}
+.sf-chart{margin:0;border:2px solid var(--sf-color-ink);background:var(--sf-color-surface);min-width:0}
+.sf-chart-head{padding:24px clamp(16px,2.4vw,32px);border-bottom:2px solid var(--sf-color-ink)}
+.sf-chart-title{font:900 clamp(1.45rem,2.3vw,2.3rem)/1.1 var(--sf-type-display);text-transform:uppercase;letter-spacing:-.045em;margin:.45em 0 .3em}
+.sf-chart-subtitle{max-width:730px;margin:0;font-size:14px}
+.sf-chart-body{padding:24px clamp(16px,2.4vw,32px)}
+.sf-chart-foot{border-top:2px solid var(--sf-color-ink);padding:16px clamp(16px,2.4vw,32px);display:grid;gap:12px}
+.sf-source{font:400 12px/1.6 var(--sf-type-mono);color:var(--sf-color-muted)}
+.sf-source strong{color:var(--sf-color-ink)}
+.sf-caption{font:400 12px/1.5 var(--sf-type-mono);color:var(--sf-color-muted)}
+.sf-chart-insight{display:flex;align-items:baseline;gap:16px;background:var(--sf-color-ink);color:var(--sf-color-paper);padding:16px 18px;margin-top:18px}
+.sf-chart-insight strong{font:900 clamp(2rem,4vw,4.4rem)/1 var(--sf-type-display);letter-spacing:-.06em;color:var(--sf-color-acid);white-space:nowrap}
+.sf-chart-insight span{font-size:13px;line-height:1.4}
+.sf-tag{font:500 11px/1.35 var(--sf-type-mono);border:1px solid currentColor;padding:5px 8px;display:inline-block;text-transform:uppercase}
+.sf-demo-banner{background:var(--sf-color-ink);color:var(--sf-color-acid);padding:10px 16px;font:500 12px/1.4 var(--sf-type-mono);text-transform:uppercase;letter-spacing:.04em}
+.sf-tablewrap{max-width:100%;overflow-x:auto;scrollbar-gutter:stable}
+.sf-table{border-collapse:collapse;width:100%;min-width:440px;font-size:14px;font-variant-numeric:tabular-nums}
+.sf-table caption{text-align:left;font:500 12px var(--sf-type-mono);padding:8px 0 14px}
+.sf-table th,.sf-table td{text-align:left;padding:11px 13px;border-bottom:1px solid var(--sf-color-muted-light);white-space:nowrap}
+.sf-table th{border-bottom:2px solid var(--sf-color-ink);font:500 12px var(--sf-type-mono)}
+.sf-table td:last-child,.sf-table th:last-child{text-align:right}
+.sf-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.sf-hidden{display:none!important}
+.sf-error{border-left:5px solid var(--sf-color-danger);padding:12px 16px;background:var(--sf-color-surface)}
+.sf-info{border-left:5px solid var(--sf-color-ultramarine);padding:12px 16px;background:var(--sf-color-surface)}
+@media(max-width:639px){.sf-chart-head,.sf-chart-body,.sf-chart-foot{padding-inline:15px}.sf-chart-insight{flex-direction:column;gap:6px}.sf-container{width:calc(100% - 32px)}.sf-section{padding-block:48px}.sf-display{font-size:clamp(3.1rem,13.2vw,5rem)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+</style>
+<style>
+/* Showcase layout, not necessarily reusable product primitives */
+body{overflow-x:hidden}
+button{color:inherit}
+#main:focus{outline:none}
+.header{position:sticky;top:0;z-index:100;background:var(--sf-color-paper);border-bottom:3px solid var(--sf-color-ink)}
+.header-inner{width:min(1440px,calc(100% - 48px));margin:auto;min-height:74px;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.brand{font:900 21px/.87 var(--sf-type-display);letter-spacing:-.075em;color:var(--sf-color-ink);text-decoration:none;text-transform:uppercase;flex-shrink:0}
+.nav{display:flex;align-items:center;gap:22px;overflow-x:auto;white-space:nowrap;scrollbar-width:thin}
+.nav a{color:var(--sf-color-ink);text-decoration:none;font:500 12px var(--sf-type-mono);padding:12px 0;border-bottom:3px solid transparent}
+.nav a:hover,.nav a:focus-visible{border-bottom-color:var(--sf-color-ultramarine)}
+.nav-issue{font:500 11px var(--sf-type-mono);white-space:nowrap}
+.hero{border-bottom:3px solid var(--sf-color-ink);min-height:590px;display:grid;grid-template-columns:1.02fr .98fr}
+.hero-left{padding:clamp(35px,5vw,78px) clamp(24px,5vw,78px);display:flex;flex-direction:column;align-items:flex-start}
+.hero-kicker{display:flex;align-items:center;gap:12px}
+.slash{display:inline-block;width:36px;height:12px;transform:skew(-24deg);background:var(--sf-color-orange)}
+.hero h1{font:900 clamp(4.3rem,8.35vw,9rem)/.92 var(--sf-type-display);letter-spacing:-.077em;text-transform:uppercase;margin:32px 0 28px;max-width:760px}
+.hero h1 .outline{-webkit-text-stroke:2px var(--sf-color-ink);color:var(--sf-color-paper)}
+.hero h1 mark{background:var(--sf-color-acid);color:var(--sf-color-ink);padding:.02em .05em;box-decoration-break:clone}
+.hero-dek{max-width:450px;border-left:5px solid var(--sf-color-orange);padding-left:18px;font-weight:600;font-size:18px;line-height:1.45;margin:0 0 25px}
+.hero-btm{margin-top:auto;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.hero-right{background:var(--sf-color-acid);border-left:3px solid var(--sf-color-ink);padding:clamp(28px,3.8vw,57px);display:flex;flex-direction:column;justify-content:space-between}
+.hero-right h2{font:900 clamp(2rem,4vw,4.6rem)/.96 var(--sf-type-display);letter-spacing:-.055em;text-transform:uppercase;max-width:650px;margin:21px 0 20px}
+.hero-right .context{font-size:14px;max-width:450px;line-height:1.5}
+.punch-big{font:900 clamp(5rem,10vw,11rem)/.9 var(--sf-type-display);letter-spacing:-.075em;margin-top:20px}
+.punch-note{border-top:2px solid var(--sf-color-ink);padding-top:15px;display:flex;justify-content:space-between;gap:20px;font:500 12px/1.6 var(--sf-type-mono)}
+.black-band{background:var(--sf-color-ink);color:var(--sf-color-paper);border-bottom:3px solid var(--sf-color-ink);padding:22px clamp(24px,4vw,60px);display:flex;justify-content:space-between;align-items:center;gap:15px}
+.black-band b{font:900 clamp(1.25rem,3vw,3rem)/1 var(--sf-type-display);text-transform:uppercase;letter-spacing:-.045em}
+.black-band small{font:400 11px/1.5 var(--sf-type-mono);max-width:420px}
+.section-head{display:grid;grid-template-columns:1fr 1.6fr;gap:35px;margin-bottom:40px}
+.section-head .index{font:500 12px var(--sf-type-mono);text-transform:uppercase;display:flex;align-items:flex-start;gap:10px}
+.index:before{content:'';width:22px;height:8px;background:var(--sf-color-orange);transform:skew(-23deg);margin-top:5px;flex:none}
+.section-head h2{font:900 clamp(2.4rem,5vw,5rem)/1.05 var(--sf-type-display);margin:0 0 16px;letter-spacing:-.05em;text-transform:uppercase}
+.section-head p{max-width:680px;font-size:17px;margin:0}
+.swatch-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:2px solid var(--sf-color-ink)}
+.swatch{min-height:180px;padding:17px;border-right:2px solid var(--sf-color-ink);display:flex;justify-content:space-between;flex-direction:column}
+.swatch:last-child{border-right:0}
+.swatch b{font:500 12px var(--sf-type-mono)}
+.swatch small{font:500 11px var(--sf-type-mono)}
+.type-demo{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:32px}
+.type-block{border-top:3px solid var(--sf-color-ink);padding-top:18px}
+.type-block .sample{font:900 clamp(2.1rem,4vw,4.5rem)/.95 var(--sf-type-display);letter-spacing:-.07em;text-transform:uppercase;margin:25px 0;overflow-wrap:anywhere}
+.type-block .body-sample{font:400 19px/1.55 var(--sf-type-sans);max-width:600px;margin:20px 0}
+.type-block .data-sample{font:500 clamp(1.3rem,2.6vw,2rem) var(--sf-type-mono);margin:28px 0}
+.component-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.specimen{border:2px solid var(--sf-color-ink);background:var(--sf-color-surface);min-width:0}
+.specimen-head{border-bottom:2px solid var(--sf-color-ink);padding:13px 18px;display:flex;justify-content:space-between;gap:10px;font:500 12px var(--sf-type-mono)}
+.specimen-content{padding:25px}
+.specimen h3{font:900 25px/1.15 var(--sf-type-display);text-transform:uppercase;letter-spacing:-.04em;margin:0 0 12px}
+.specimen p{font-size:14px;margin:0 0 22px}
+.state-sample{margin-top:15px;min-height:42px;padding:10px;background:var(--sf-color-paper);font:500 12px/1.5 var(--sf-type-mono);border-left:4px solid var(--sf-color-ultramarine)}
+.viz-intro{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-bottom:22px;align-items:end}
+.viz-intro p{max-width:520px;margin:0}
+.chart-layout{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:24px}
+.chart-layout .sf-chart{min-width:0}
+.chart-kicker{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.chart-controls{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:19px}
+.chart-legend{font:500 11px var(--sf-type-mono);border-top:2px solid var(--sf-color-ink);border-bottom:2px solid var(--sf-color-ink);padding:9px 0;display:flex;justify-content:space-between;gap:10px;margin-bottom:10px}
+.barlist{display:grid;gap:2px}
+.baritem{width:100%;display:grid;grid-template-columns:38px minmax(0,1fr) 45px;gap:12px;align-items:center;padding:4px 0;border:0;background:transparent;color:var(--sf-color-ink);text-align:left;min-height:36px}
+.baritem .track{height:23px;background:#E6E2D8;border:1px solid var(--sf-color-ink);position:relative}
+.baritem .fill{display:block;background:var(--sf-color-ultramarine);height:100%;transition:width 360ms var(--sf-motion-easing)}
+.baritem[aria-pressed="true"] .fill{background:var(--sf-color-data-orange)}
+.baritem[aria-pressed="true"] .track{box-shadow:3px 3px 0 var(--sf-color-ink)}
+.baritem .num,.baritem .value{font:500 12px var(--sf-type-mono)}
+.baritem .value{text-align:right}
+.viz-matrix{display:grid;grid-template-columns:26px repeat(5,minmax(0,1fr));gap:5px;width:100%}
+.matrix-axis{font:500 12px var(--sf-type-mono);display:grid;place-items:center}
+.matrix-axis-title{font:500 11px var(--sf-type-mono);margin:3px 0 8px;text-transform:uppercase}
+.matrix-cell{border:2px solid var(--sf-color-ink);min-height:51px;color:var(--sf-color-ink);font:500 14px var(--sf-type-mono);padding:7px 2px;position:relative}
+.matrix-cell[aria-pressed="true"]{outline:3px solid var(--sf-color-ultramarine);outline-offset:2px;z-index:2;box-shadow:inset 0 0 0 2px var(--sf-color-surface)}
+.matrix-cell:hover{filter:saturate(1.25)}
+.matrix-foot{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:16px}
+.dots-grid{display:grid;grid-template-columns:repeat(20,minmax(0,1fr));gap:4px;max-width:100%;margin:17px 0}
+.dot{aspect-ratio:1;background:var(--sf-color-muted-light);border:1px solid var(--sf-color-ink);display:block}
+.dot.on{background:var(--sf-color-ultramarine)}
+.dots-caption{font:500 12px var(--sf-type-mono)}
+.line-chart svg{display:block;width:100%;height:auto;overflow:visible}
+.line-chart .grid-line{stroke:var(--sf-color-muted-light);stroke-width:1}
+.line-chart .trend{fill:none;stroke:var(--sf-color-ultramarine);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.line-chart .marker{fill:var(--sf-color-paper);stroke:var(--sf-color-ultramarine);stroke-width:3}
+.line-chart .marker.is-selected{fill:var(--sf-color-orange);stroke:var(--sf-color-ink);stroke-width:3}
+.line-chart button{background:transparent}
+.story-samples{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}
+.template-cover{background:var(--sf-color-acid);min-height:330px;border:2px solid var(--sf-color-ink);padding:28px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between}
+.template-cover h3{font:900 clamp(3rem,5vw,5.8rem)/.94 var(--sf-type-display);letter-spacing:-.065em;text-transform:uppercase;margin:0}
+.template-cover .cover-foot{display:flex;align-items:end;justify-content:space-between;gap:20px;width:100%;font:500 11px/1.5 var(--sf-type-mono)}
+.template-social{border:2px solid var(--sf-color-ink);background:var(--sf-color-ultramarine);color:var(--sf-color-white);padding:27px;min-height:330px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.template-social h3{font:900 clamp(2.5rem,4vw,4.5rem)/1 var(--sf-type-display);letter-spacing:-.055em;text-transform:uppercase;margin:18px 0}
+.template-social .number{display:inline-block;font:900 clamp(3.2rem,6vw,5rem) var(--sf-type-display);color:var(--sf-color-acid)}
+.rules-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rule-card{border-top:3px solid var(--sf-color-ink);padding-top:16px}
+.rule-card strong{font:900 24px var(--sf-type-display);text-transform:uppercase}
+.rule-card p{font-size:14px;line-height:1.6}
+.footer{background:var(--sf-color-ink);color:var(--sf-color-paper);padding:60px 0}
+.footer h2{font:900 clamp(2.5rem,6vw,6rem)/.9 var(--sf-type-display);letter-spacing:-.07em;margin:0 0 28px}
+.footer p{max-width:650px}
+.footer a{color:var(--sf-color-acid)}
+.no-wrap{white-space:nowrap}
+details.method{border-top:2px solid var(--sf-color-ink);margin-top:10px;padding-top:12px}
+details.method summary{cursor:pointer;font:500 12px var(--sf-type-mono);text-transform:uppercase;min-height:35px}
+details.method p{font-size:13px;margin:8px 0}
+.live-note{font:500 12px var(--sf-type-mono);color:var(--sf-color-muted);margin-top:10px}
+@media(max-width:1050px){.hero{grid-template-columns:1fr 1fr;min-height:0}.hero h1{font-size:clamp(4rem,8vw,7rem)}.header-inner{width:calc(100% - 30px)}.nav{gap:13px}.nav-issue{display:none}.chart-layout{grid-template-columns:1fr}}
+@media(max-width:740px){.hero{grid-template-columns:1fr}.hero-right{border-left:0;border-top:3px solid var(--sf-color-ink);min-height:400px}.hero-left{padding:40px 24px}.hero h1{font-size:clamp(4.15rem,13.3vw,7rem)}.section-head,.viz-intro,.component-grid,.type-demo,.story-samples{grid-template-columns:1fr}.swatch-grid{grid-template-columns:repeat(2,1fr)}.swatch{min-height:135px;border-bottom:2px solid var(--sf-color-ink)}.swatch:nth-child(2n){border-right:0}.swatch:last-child{grid-column:span 2}.rules-grid{grid-template-columns:1fr}.nav{gap:12px}.nav a{font-size:10px}.header-inner{min-height:65px}.brand{font-size:17px}.header-inner{align-items:center}.punch-big{font-size:7rem}.dots-grid{grid-template-columns:repeat(10,minmax(0,1fr))}.sf-chart-title{font-size:1.6rem}}
+@media(max-width:400px){.hero h1{font-size:clamp(3.5rem,12.9vw,5.1rem)}.hero-right h2{font-size:2.25rem}.nav a{font-size:10px}.viz-matrix{gap:3px;grid-template-columns:23px repeat(5,minmax(0,1fr))}.matrix-cell{padding:5px 0;min-height:44px;font-size:12px}.matrix-axis{font-size:10px}.baritem{grid-template-columns:27px 1fr 35px;gap:6px}.swatch small{font-size:10px}}
+
+</style>
+</head>
+<body>
+<a class="sf-skip" href="#main">Salta al contenuto</a>
+<div class="sf-demo-banner" role="note" style="text-align:center">DEMO DI DESIGN SYSTEM · TUTTI I VALORI DEI GRAFICI SONO SINTETICI, NON RAPPRESENTANO L'ITALIA</div>
+<header class="header" role="banner"><div class="header-inner"><a class="brand" href="#top" aria-label="Punti di Fuga, torna all'inizio">PUNTI<br>DI FUGA.</a><nav class="nav" aria-label="Sezioni del design system"><a href="#identita">01 IDENTITÀ</a><a href="#componenti">02 COMPONENTI</a><a href="#grafici">03 GRAFICI</a><a href="#template">04 TEMPLATE</a><a href="#codex">05 CODEX</a></nav><div class="nav-issue">SCHIAFFO / DS 1.0</div></div></header>
+<main id="main" tabindex="-1">
+<section class="hero" id="top" aria-labelledby="hero-title"><div class="hero-left"><div class="sf-kicker hero-kicker"><i class="slash" aria-hidden="true"></i> DESIGN SYSTEM / ROUND 03</div><h1 id="hero-title">I DATI<br>NON<br><span class="outline">STANNO</span><br><mark>ZITTI.</mark></h1><p class="hero-dek">Una grafica che colpisce. Un'interazione che fa capire. Un metodo che permette di verificare.</p><div class="hero-btm"><a class="sf-button sf-button--acid" href="#grafici">ESPLORA I GRAFICI ↗</a><a class="sf-button sf-button--secondary" href="#identita">LEGGI LE REGOLE</a></div></div><aside class="hero-right" aria-label="Principio fondamentale"><span class="sf-kicker">01 / LA PROMESSA</span><div><h2>L'impatto è un mezzo.<br>La precisione è il fine.</h2><p class="context">Schiaffo è il linguaggio neo-brutalista di Punti di Fuga: grandi affermazioni editoriali, basi statistiche dichiarate e strumenti per esplorare in autonomia.</p></div><div><div class="punch-big">16<span aria-hidden="true">↗</span></div><div class="punch-note"><span>TIPI DI VISUALIZZAZIONE<br>SPECIFICATI NEI DOCUMENTI</span><span>01 / SISTEMA RIUTILIZZABILE<br>02 / DATI VERIFICABILI</span></div></div></aside></section>
+<div class="black-band"><b>IL GRAFICO NON È UN ORNAMENTO. ↗</b><small>Un buon design system non decide solo come appaiono i grafici: decide cosa comunicano, quando si possono usare e come vengono esplorati.</small></div>
+<section id="identita" class="sf-section"><div class="sf-container"><div class="section-head"><div class="index">01 / FONDAMENTA</div><div><h2>Una voce. <br>Regole chiare.</h2><p>Carta calda, inchiostro duro, due colori di tensione e uno di azione. Il contrasto deve guidare l'attenzione, non trasformare ogni elemento in una sirena.</p></div></div><div class="swatch-grid" role="list" aria-label="Palette brand"><div class="swatch" role="listitem" style="background:var(--sf-color-paper);color:var(--sf-color-ink)"><b>CARTA</b><small>#F7F3E8<br>Superficie base</small></div><div class="swatch" role="listitem" style="background:var(--sf-color-ink);color:var(--sf-color-paper)"><b>INCHIOSTRO</b><small>#171719<br>Testo e bordi</small></div><div class="swatch" role="listitem" style="background:var(--sf-color-acid);color:var(--sf-color-ink)"><b>ACID</b><small>#E2F33E<br>Enfasi</small></div><div class="swatch" role="listitem" style="background:var(--sf-color-orange);color:var(--sf-color-ink)"><b>ARANCIO</b><small>#FC5938<br>Annotazione</small></div><div class="swatch" role="listitem" style="background:var(--sf-color-ultramarine);color:var(--sf-color-white)"><b>ULTRAMARINE</b><small>#3426C3<br>Selezione</small></div></div><div class="type-demo"><article class="type-block"><div class="sf-meta">ARCHIVO BLACK / DISPLAY</div><div class="sample">LA SCALA<br>NON È<br>UGUALE.</div><p>Gerarchia estrema, ritmo da poster. Solo titoli e numeri che meritano attenzione.</p></article><article class="type-block"><div class="sf-meta">SPACE GROTESK + DM MONO / LETTURA</div><p class="body-sample">Due persone partono da posizioni diverse. Una domanda semplice: quali percorsi diventano possibili, e per chi?</p><div class="data-sample">P(DEST. V | ORIG. I) = 6%</div><p class="sf-caption">Mono per numeri, unità, riferimenti e microcopy; il testo lungo rimane in un sans leggibile.</p></article></div></div></section>
+<section id="componenti" class="sf-section"><div class="sf-container"><div class="section-head"><div class="index">02 / COMPONENTI</div><div><h2>Comandi che si <br>fanno capire.</h2><p>Le forme sono nette, ma gli affordance non devono essere enigmatici: selezioni persistenti, focus ben visibile, azioni che restituiscono feedback.</p></div></div><div class="component-grid"><article class="specimen"><div class="specimen-head"><span>UI / 01 — AZIONI</span><span>DEFAULT · HOVER · FOCUS</span></div><div class="specimen-content"><h3>Bottoni e priorità</h3><p>Un'azione dominante e una secondaria. L'acid segnala la chiamata principale; nessun bottone è decorativo.</p><div class="sf-toolbar"><button class="sf-button sf-button--acid" type="button" id="tryPrimary">ESPLORA ↗</button><button class="sf-button sf-button--secondary" type="button" id="trySecondary">MOSTRA NOTA</button><button class="sf-button" disabled>NON DISPONIBILE</button></div><div class="state-sample" id="componentFeedback" role="status" aria-live="polite">PROVA UN CONTROLLO PER VEDERE IL FEEDBACK</div></div></article><article class="specimen"><div class="specimen-head"><span>UI / 02 — SELEZIONE</span><span>STATO VISIBILE</span></div><div class="specimen-content"><h3>Segmented & chips</h3><p>Una selezione per volta, con testo e colore. La domanda non cambia silenziosamente quando modifichi una metrica.</p><div class="sf-toolbar" aria-label="Esempio tipo di grafico"><button type="button" class="sf-pill" data-sample-view="Grafico" aria-pressed="true">GRAFICO</button><button type="button" class="sf-pill" data-sample-view="Tabella" aria-pressed="false">TABELLA</button><button type="button" class="sf-pill" data-sample-view="Metodo" aria-pressed="false">METODO</button></div><div class="state-sample" id="sampleSelection" role="status" aria-live="polite">VISTA SELEZIONATA: GRAFICO</div></div></article><article class="specimen"><div class="specimen-head"><span>UI / 03 — BLOCCHI INFORMATIVI</span><span>UN NUMERO CON CONTESTO</span></div><div class="specimen-content"><h3>Stat sticker & fonte</h3><span class="sf-sticker">PER 100 PERSONE ↗</span><div class="sf-chart-insight"><strong>06%</strong><span>Quota simulata nel campione immaginario. Senza questa didascalia il numero non significa nulla.</span></div><p class="sf-source" style="margin-top:13px"><strong>FONTE:</strong> dataset sintetico, nessun ente statistico reale. Anno dimostrativo.</p></div></article><article class="specimen"><div class="specimen-head"><span>UI / 04 — DISCLOSURE</span><span>RIGORE ACCESSIBILE</span></div><div class="specimen-content"><h3>Metodo senza ostacoli</h3><p>Il dettaglio metodologico non interrompe l'esplorazione. È sempre apribile vicino al grafico, con etichette parlanti.</p><details class="method"><summary>COME È STATO CALCOLATO? ＋</summary><p>I valori in questa demo non derivano da stime. Nei casi reali documenteremo fonte, coorti, pesi, popolazione e definizione del quintile.</p></details><details class="method"><summary>QUALI SONO I LIMITI? ＋</summary><p>Una probabilità condizionata non equivale alla quota di tutta la popolazione. Non trasformare queste matrici in flussi assoluti senza margini.</p></details></div></article></div></div></section>
+<section id="grafici" class="sf-section"><div class="sf-container"><div class="section-head"><div class="index">03 / DATA VIZ SYSTEM</div><div><h2>Il dato è <br>un'interazione.</h2><p>Grafici che hanno un senso anche senza mouse. Prova filtri, selezioni, vista tabellare, esportazione CSV e riproducibilità del permalink. Tutto con dati di esempio.</p></div></div><div class="sf-demo-banner" role="note">ATTENZIONE: I GRAFICI SEGUENTI UTILIZZANO DATI SINTETICI. NON CITARLI COME INFORMAZIONI REALI SULL'ITALIA.</div>
+<div class="chart-layout">
+<figure class="sf-chart" id="rankChart"><div class="sf-chart-head"><div class="chart-kicker sf-meta"><span>V01 / RANK BAR</span><span>DEMO · DISTRIBUZIONE</span></div><h3 class="sf-chart-title">Quanto si concentra nel decile più alto?</h3><p class="sf-chart-subtitle">Quote percentuali simulate distribuite su dieci gruppi di uguale numerosità. Ogni serie somma a 100%.</p></div><div class="sf-chart-body"><div class="chart-controls"><div class="sf-toolbar" aria-label="Seleziona risorsa"><button type="button" class="sf-pill rank-metric" data-metric="wealth" aria-pressed="true">PATRIMONIO</button><button type="button" class="sf-pill rank-metric" data-metric="income" aria-pressed="false">REDDITO</button></div><button type="button" class="sf-button sf-button--quiet" id="rankReset">RESET ↺</button></div><div class="chart-legend"><span>DECILE</span><span>QUOTA SUL TOTALE (%)</span></div><div id="rankView" aria-label="Grafico a barre per decile"></div><div class="sf-chart-insight" id="rankInsight" role="status" aria-live="polite"></div></div><figcaption class="sf-chart-foot"><div class="sf-toolbar"><button class="sf-button sf-button--secondary" type="button" id="rankTableToggle" aria-pressed="false">MOSTRA TABELLA</button><button class="sf-button sf-button--secondary" type="button" id="rankCsv">↓ CSV</button><button class="sf-button sf-button--secondary" type="button" id="rankLink">COPIA LINK</button></div><div id="rankTable" class="sf-hidden sf-tablewrap"></div><div class="sf-source"><strong>FONTE:</strong> dati generati esclusivamente per questa dimostrazione. Percentuali non riferite all'Italia.</div><details class="method"><summary>DEFINIZIONI E LIMITI ＋</summary><p>Le quote sono elementi inventati che sommano a 100. Nelle pubblicazioni reali specificare reddito lordo/netto, patrimonio netto, unità (individuale o familiare), periodo e pesi statistici.</p></details><span class="live-note" id="rankFeedback" role="status" aria-live="polite"></span></figcaption></figure>
+<figure class="sf-chart" id="mobilityChart"><div class="sf-chart-head"><div class="chart-kicker sf-meta"><span>V06 + V08 / MATRICE + 100 DOTS</span><span>DEMO · MOBILITÀ</span></div><h3 class="sf-chart-title">Da dove parti, dove puoi arrivare?</h3><p class="sf-chart-subtitle">Probabilità simulate di passare da quintile di origine (righe) a quintile di destinazione (colonne).</p></div><div class="sf-chart-body"><div class="chart-controls"><div><label for="originSelect" class="sf-control-label">QUINTILE DI ORIGINE</label><select id="originSelect" class="sf-select"><option value="0">I — più basso</option><option value="1">II</option><option value="2">III</option><option value="3">IV</option><option value="4">V — più alto</option></select></div><button id="matrixReset" type="button" class="sf-button sf-button--quiet">RESET ↺</button></div><p class="matrix-axis-title">COLONNE: QUINTILE DI DESTINAZIONE →</p><div id="matrixView" class="viz-matrix" aria-label="Matrice di transizione condizionata 5 per 5"></div><div class="matrix-foot"><span class="sf-caption">RIGHE: ORIGINE ↓</span><span class="sf-caption">CELLA: PERCENTUALE</span></div><div class="sf-chart-insight" id="matrixInsight" role="status" aria-live="polite"></div><div class="dots-grid" id="dots100" aria-hidden="true"></div><div class="dots-caption" id="dotsLabel" aria-live="polite"></div></div><figcaption class="sf-chart-foot"><div class="sf-toolbar"><button class="sf-button sf-button--secondary" type="button" id="matrixTableToggle" aria-pressed="false">MOSTRA TABELLA</button><button class="sf-button sf-button--secondary" type="button" id="matrixCsv">↓ CSV</button><button class="sf-button sf-button--secondary" type="button" id="matrixLink">COPIA LINK</button></div><div id="matrixTable" class="sf-hidden sf-tablewrap"></div><div class="sf-source"><strong>FONTE:</strong> matrice dimostrativa. Ogni riga è una distribuzione condizionata su 100, non un flusso nazionale.</div><details class="method"><summary>DEFINIZIONI E LIMITI ＋</summary><p>Le righe sommano a 100. Il flusso di popolazione dipende anche da quanti individui sono presenti in ogni origine. Per dati reali indicare coorti, età misurata, definizioni di reddito e base statistica.</p></details><span class="live-note" id="matrixFeedback" role="status" aria-live="polite"></span></figcaption></figure>
+</div>
+<div class="chart-layout"><figure class="sf-chart" id="trendChart"><div class="sf-chart-head"><div class="chart-kicker sf-meta"><span>V03 / TREND LINE</span><span>DEMO · TEMPO</span></div><h3 class="sf-chart-title">Come cambia la quota del top 10%?</h3><p class="sf-chart-subtitle">Serie dimostrativa di quote aggregate percentuali tra anni immaginari 1990–2025.</p></div><div class="sf-chart-body"><div class="chart-controls"><div class="sf-toolbar" aria-label="Scegli indicatore per la serie"><button class="sf-pill trend-metric" type="button" data-trend="income" aria-pressed="true">REDDITO</button><button class="sf-pill trend-metric" type="button" data-trend="wealth" aria-pressed="false">PATRIMONIO</button></div><button type="button" class="sf-button sf-button--quiet" id="trendReset">RESET ↺</button></div><div class="line-chart" id="trendPlot" role="group" aria-label="Grafico serie temporale con selezione degli anni"></div><div class="sf-chart-insight" role="status" aria-live="polite" id="trendInsight"></div></div><figcaption class="sf-chart-foot"><div class="sf-toolbar"><button type="button" class="sf-button sf-button--secondary" id="trendTableToggle" aria-pressed="false">MOSTRA TABELLA</button><button type="button" class="sf-button sf-button--secondary" id="trendCsv">↓ CSV</button><button type="button" class="sf-button sf-button--secondary" id="trendLink">COPIA LINK</button></div><div id="trendTable" class="sf-tablewrap sf-hidden"></div><div class="sf-source"><strong>FONTE:</strong> serie storica inventata a scopo dimostrativo; nessuna attribuzione a ente reale.</div><details class="method"><summary>DEFINIZIONI E LIMITI ＋</summary><p>La condivisione di assi deve essere documentata; serie reali richiedono controlli di continuità delle definizioni e comparabilità nel tempo.</p></details><span class="live-note" id="trendFeedback" role="status" aria-live="polite"></span></figcaption></figure>
+<article class="sf-chart"><div class="sf-chart-head"><div class="sf-meta">V04–V16 / CHART CHOOSER</div><h3 class="sf-chart-title">Una domanda, non un effetto speciale.</h3><p class="sf-chart-subtitle">Il template deriva dalla relazione statistica, non dalla voglia di stupire. Gli altri tredici contratti sono descritti nel documento DATA_VIZ.md.</p></div><div class="sf-chart-body"><div class="sf-toolbar" aria-label="Esplora categorie di visualizzazione" id="chooserControls"><button class="sf-pill" type="button" data-chooser="distribution" aria-pressed="true">DISTRIBUZIONE</button><button class="sf-pill" type="button" data-chooser="flow" aria-pressed="false">FLUSSO</button><button class="sf-pill" type="button" data-chooser="change" aria-pressed="false">CAMBIAMENTO</button><button class="sf-pill" type="button" data-chooser="relation" aria-pressed="false">RELAZIONE</button></div><div id="chooserDetail" style="background:var(--sf-color-acid);border:2px solid var(--sf-color-ink);padding:26px;margin-top:23px;min-height:238px" role="status" aria-live="polite"></div><div class="sf-info" style="margin-top:18px;font-size:14px"><strong>La regola.</strong> Il grafico deve funzionare già nello stato di default. L'esplorazione aggiunge dettagli e alternative; non deve nascondere il messaggio iniziale.</div></div><div class="sf-chart-foot"><p class="sf-source">SCHEDE: V01–V16, con requisiti di input, rendering, interazione, tabella equivalente e anti-pattern.</p></div></article></div>
+</div></section>
+<section id="template" class="sf-section"><div class="sf-container"><div class="section-head"><div class="index">04 / FORMATI</div><div><h2>Dal sito <br>al manifesto.</h2><p>Un'identità può estendersi a inchieste, esploratori e caroselli se le gerarchie restano prevedibili e le fonti non vengono sacrificate.</p></div></div><div class="story-samples"><article class="template-cover"><span class="sf-meta">LONGFORM / COPERTINA</span><h3>NON<br>TUTTE LE<br>PARTENZE<br>SONO<br>UGUALI.</h3><div class="cover-foot"><span>LA DOMANDA → LA PROVA → L'ESPLORAZIONE</span><span>UN GRAFICO HERO, FONTE VISIBILE</span></div></article><article class="template-social"><span class="sf-meta">SOCIAL / POSTER STATISTICO</span><h3>PER OGNI<br>100 PERSONE</h3><span class="number">06 ↗</span><div style="border-top:2px solid white;padding-top:14px;font:500 11px/1.5 var(--sf-type-mono)">ESEMPIO SINTETICO · VALORE INVENTATO<br>Fonte: demo.json · Non riferito all'Italia</div></article></div><div class="rules-grid" style="margin-top:40px"><article class="rule-card"><strong>Story →</strong><p>Una domanda, quattro capitoli narrativi e un grafico per ogni passaggio importante. No animazioni che nascondono la prova.</p></article><article class="rule-card"><strong>Explorer →</strong><p>Selettori, grafico, insight e tabella. La configurazione si può condividere attraverso URL e CSV coerenti.</p></article><article class="rule-card"><strong>Social →</strong><p>Un claim per card, un segno visivo dominante, fonti e unità leggibili sul telefono. Nessun screenshot di una dashboard miniaturizzata.</p></article></div></div></section>
+<section id="codex" class="sf-section"><div class="sf-container"><div class="section-head"><div class="index">05 / SISTEMA OPERATIVO</div><div><h2>Non ricominciare <br>da zero.</h2><p>Codex deve poter generare nuovi pezzi senza reinterpretare l'identità ogni volta: token centralizzati, componenti, contratti chart, comportamento e test.</p></div></div><div class="component-grid"><article class="specimen"><div class="specimen-head"><span>CANONICO / TOKEN</span><span>01</span></div><div class="specimen-content"><h3>tokens.json</h3><p>Palette, font, spacing, dimensioni, scale dei grafici e stati. Dal JSON viene generato il CSS con uno script Node senza dipendenze.</p><code style="font:500 12px/1.8 var(--sf-type-mono);display:block;background:var(--sf-color-paper);padding:13px;white-space:normal">node scripts/generate-css.mjs</code></div></article><article class="specimen"><div class="specimen-head"><span>CANONICO / AGENTI</span><span>02</span></div><div class="specimen-content"><h3>AGENTS.md</h3><p>Le regole che Codex deve consultare prima di sviluppare: token, UX, chart frame, fonte, accessibilità, esempi, test. Il sistema resta consistente tra repository.</p><code style="font:500 12px/1.8 var(--sf-type-mono);display:block;background:var(--sf-color-paper);padding:13px;white-space:normal">Leggere AGENTS.md → codificare → testare</code></div></article></div><div class="sf-info" style="margin-top:24px"><strong>NOTA TECNICA:</strong> questa demo è un riferimento interattivo in HTML/CSS/JS. I componenti in React/Next, se richiesti da un progetto futuro, devono essere implementati a partire da questi contratti: non sono già pubblicati come libreria.</div></div></section>
+</main>
+<footer class="footer"><div class="sf-container"><div class="sf-meta">PUNTI DI FUGA / SCHIAFFO / DESIGN SYSTEM v1.0</div><h2>L'ESTETICA<br>PRENDE POSIZIONE.<br><span style="color:var(--sf-color-acid)">I DATI NO.</span></h2><p>Questo showcase dimostra un sistema visivo e di interazione. Non contiene dati statistici reali sull'Italia. La documentazione completa è nel pacchetto sorgente.</p><p class="sf-meta">BENCHMARK: FT VISUAL VOCABULARY · OUR WORLD IN DATA · DATAWRAPPER · ONS · THE PUDDING · WCAG 2.2</p></div></footer>
+<script>
+/* DATI SINTETICI. Generato da examples/data/demo.json. */
+window.SF_DEMO_DATA={"synthetic":true,"label":"DATI SINTETICI — ESEMPIO NON RIFERITO ALL'ITALIA","meta":{"id":"demo-inequality-001","population":"popolazione immaginaria","geography":"nessun paese reale","period":"anni immaginari 1990–2025","source":{"org":"Schiaffo design demonstration","dataset":"demo.json","updatedAt":"2026-10-26"},"limitations":["Valori creati solo per dimostrare UX e interazioni."]},"decileWealthShare":[1,2,3,4,5,6,8,10,15,46],"decileIncomeShare":[3,4,5,6,7,9,11,13,17,25],"mobilityConditionalPercent":[[38,27,18,11,6],[22,28,23,17,10],[14,21,27,23,15],[9,15,23,29,24],[5,9,16,25,45]],"trend":{"years":[1990,1995,2000,2005,2010,2015,2020,2025],"incomeTop10Share":[20,21,21,22,22,23,24,25],"wealthTop10Share":[35,36,39,40,42,44,45,46]},"rules":{"decileSeriesSum":100,"matrixRowSum":100,"allDataAreIllustrative":true}};
+
+</script>
+<script>
+/* Schiaffo demo reference interactions. Pure browser JS, no framework. */
+(()=>{
+ 'use strict';
+ const D=window.SF_DEMO_DATA;
+ const $=(s,root=document)=>root.querySelector(s);
+ const $$=(s,root=document)=>[...root.querySelectorAll(s)];
+ const fmt=new Intl.NumberFormat('it-IT',{maximumFractionDigits:1});
+ const roman=['I','II','III','IV','V'];
+ const safeParam=(name,values,def)=>values.includes(new URL(location.href).searchParams.get(name))?new URL(location.href).searchParams.get(name):def;
+ const indexParam=(name,max,def)=>{const raw=new URL(location.href).searchParams.get(name); if(raw===null||raw.trim()==='')return def;const x=Number(raw);return Number.isInteger(x)&&x>=0&&x<max?x:def;};
+ const S={rankMetric:safeParam('rank',['wealth','income'],'wealth'),rankSelected:indexParam('decile',10,9),rankTable:false,origin:indexParam('origin',5,0),dest:indexParam('dest',5,4),matrixTable:false,trendMetric:safeParam('trend',['income','wealth'],'income'),trendIndex:indexParam('yearIndex',D.trend.years.length,D.trend.years.length-1),trendTable:false,chooser:'distribution'};
+ function syncUrl(){
+  const u=new URL(location.href);u.searchParams.set('rank',S.rankMetric);u.searchParams.set('decile',S.rankSelected);u.searchParams.set('origin',S.origin);u.searchParams.set('dest',S.dest);u.searchParams.set('trend',S.trendMetric);u.searchParams.set('yearIndex',S.trendIndex);
+  try{history.replaceState(null,'',u.toString())}catch(e){/* Browsers may forbid file:// history writes */}
+ }
+ function updateStateFromUrl(){ S.rankMetric=safeParam('rank',['wealth','income'],'wealth');S.rankSelected=indexParam('decile',10,9);S.origin=indexParam('origin',5,0);S.dest=indexParam('dest',5,4);S.trendMetric=safeParam('trend',['income','wealth'],'income');S.trendIndex=indexParam('yearIndex',D.trend.years.length,D.trend.years.length-1);renderAll(); }
+ function note(id,text){$(id).textContent=text;}
+ const escapeHtml=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ function csvText(rows){return '\uFEFF'+rows.map(row=>row.map(v=>'"'+String(v??'').replaceAll('"','""')+'"').join(';')).join('\r\n')+'\r\n';}
+ function exportCsv(filename,rows,feedback){
+  try{const data=csvText(rows);const blob=new Blob([data],{type:'text/csv;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.style.display='none';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);note(feedback,'CSV CREATO: '+filename+' — DATI SINTETICI.');}
+  catch(e){note(feedback,'ESPORTAZIONE NON RIUSCITA: '+e.message)}
+ }
+ async function copyLink(feedback){syncUrl(); const u=location.href;try{if(navigator.clipboard&&navigator.clipboard.writeText){await navigator.clipboard.writeText(u);}else{const temp=document.createElement('textarea');temp.value=u;temp.style.position='fixed';temp.style.opacity='0';document.body.appendChild(temp);temp.select();if(!document.execCommand('copy'))throw Error('Accesso appunti non consentito');temp.remove();}note(feedback,'LINK DELLA CONFIGURAZIONE COPIATO.');}catch(e){note(feedback,'COPIA AUTOMATICA NON DISPONIBILE: COPIA L’INDIRIZZO DAL BROWSER.');}}
+ function rankData(){return S.rankMetric==='wealth'?D.decileWealthShare:D.decileIncomeShare;}
+ function renderRank(){
+  const data=rankData(), max=50;
+  $$('.rank-metric').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.metric===S.rankMetric)));
+  $('#rankView').innerHTML='<div class="barlist">'+data.map((val,i)=>`<button type="button" class="baritem" data-decile="${i}" aria-pressed="${S.rankSelected===i}" aria-label="Decile ${i+1}, quota ${val} per cento, seleziona per dettagli"><span class="num">${i+1}°</span><span class="track" aria-hidden="true"><span class="fill" style="width:${100*val/max}%"></span></span><span class="value">${val}%</span></button>`).join('')+'</div>';
+  const value=data[S.rankSelected];$('#rankInsight').innerHTML=`<strong>${fmt.format(value)}%</strong><span>Il ${S.rankSelected+1}° decile concentra una quota <b>simulata</b> di ${fmt.format(value)} su 100 della risorsa selezionata (${S.rankMetric==='wealth'?'patrimonio':'reddito'}). Valore inventato.</span>`;
+  const t=$('#rankTable');t.innerHTML='<table class="sf-table"><caption>Quote sintetiche per decile, '+(S.rankMetric==='wealth'?'patrimonio':'reddito')+'</caption><thead><tr><th scope="col">Decile</th><th scope="col">Quota sul totale (%)</th></tr></thead><tbody>'+data.map((x,i)=>`<tr><th scope="row">${i+1}°</th><td>${fmt.format(x)}%</td></tr>`).join('')+'</tbody></table>';t.classList.toggle('sf-hidden',!S.rankTable);$('#rankTableToggle').setAttribute('aria-pressed',String(S.rankTable));$('#rankTableToggle').textContent=S.rankTable?'NASCONDI TABELLA':'MOSTRA TABELLA';syncUrl();
+ }
+ function renderMatrix(){
+  $('#originSelect').value=String(S.origin);
+  const vals=D.mobilityConditionalPercent;
+  let html='<div class="matrix-axis" aria-hidden="true">↘</div>'+roman.map(r=>`<div class="matrix-axis" aria-hidden="true">${r}</div>`).join('');
+  vals.forEach((row,i)=>{html+=`<div class="matrix-axis" aria-hidden="true">${roman[i]}</div>`;row.forEach((value,j)=>{const idx=Math.max(0,Math.min(4,Math.floor(value/10)));const bg=`var(--sf-chart-sequential-${idx+1})`,fg=idx>=3?'var(--sf-color-white)':'var(--sf-color-ink)';html+=`<button type="button" class="matrix-cell" data-row="${i}" data-col="${j}" style="background:${bg};color:${fg}" aria-pressed="${S.origin===i&&S.dest===j}" aria-label="Origine quintile ${roman[i]}, destinazione quintile ${roman[j]}, ${value} per cento; seleziona">${value}%</button>`;});});
+  $('#matrixView').innerHTML=html;
+  const value=vals[S.origin][S.dest];
+  $('#matrixInsight').innerHTML=`<strong>${value}/100</strong><span>Nell'esempio, da origine <b>${roman[S.origin]}</b> a destinazione <b>${roman[S.dest]}</b>: ${value} persone su 100. La riga è una probabilità condizionata sintetica.</span>`;
+  $('#dots100').innerHTML=Array.from({length:100},(_,i)=>`<span class="dot${i<value?' on':''}"></span>`).join('');
+  $('#dotsLabel').textContent=`${value} PUNTI BLU SU 100 · ORIGINE ${roman[S.origin]} → DESTINAZIONE ${roman[S.dest]} · DATI SINTETICI`;
+  const t=$('#matrixTable');t.innerHTML='<table class="sf-table"><caption>Matrice sintetica: probabilità percentuale per origine e destinazione</caption><thead><tr><th scope="col">Origine ↓ / Destinazione →</th>'+roman.map(x=>`<th scope="col">${x}</th>`).join('')+'</tr></thead><tbody>'+vals.map((row,i)=>`<tr><th scope="row">${roman[i]}</th>${row.map(x=>`<td>${x}%</td>`).join('')}</tr>`).join('')+'</tbody></table>';t.classList.toggle('sf-hidden',!S.matrixTable);$('#matrixTableToggle').setAttribute('aria-pressed',String(S.matrixTable));$('#matrixTableToggle').textContent=S.matrixTable?'NASCONDI TABELLA':'MOSTRA TABELLA';syncUrl();
+ }
+ function trendValues(){return S.trendMetric==='wealth'?D.trend.wealthTop10Share:D.trend.incomeTop10Share;}
+ function renderTrend(){
+  $$('.trend-metric').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.trend===S.trendMetric)));
+  const v=trendValues(),years=D.trend.years, w=560,h=265,left=36,right=16,top=19,bottom=45;
+  const max=50,min=0;const x=i=>left+(w-left-right)*i/(v.length-1);const y=val=>top+(h-top-bottom)*(max-val)/(max-min);
+  const path=v.map((value,i)=>`${i===0?'M':'L'}${x(i)},${y(value)}`).join(' ');
+  const lines=[0,10,20,30,40,50].map(val=>`<line class="grid-line" x1="${left}" x2="${w-right}" y1="${y(val)}" y2="${y(val)}"/><text x="4" y="${y(val)+4}" font-size="11" font-family="DM Mono,monospace" fill="#565654">${val}%</text>`).join('');
+  const ticks=years.filter((yr,i)=>i%2===0||i===years.length-1).map(yr=>{const i=years.indexOf(yr);return `<text x="${x(i)}" y="${h-10}" font-size="11" font-family="DM Mono,monospace" text-anchor="middle" fill="#565654">${yr}</text>`}).join('');
+  const markers=v.map((val,i)=>`<circle class="marker ${S.trendIndex===i?'is-selected':''}" cx="${x(i)}" cy="${y(val)}" r="${S.trendIndex===i?7:4}"/>`).join('');
+  $('#trendPlot').innerHTML=`<svg viewBox="0 0 ${w} ${h}" aria-hidden="true" focusable="false">${lines}<path class="trend" d="${path}"/>${markers}${ticks}</svg><div class="sf-toolbar" style="justify-content:center;margin-top:7px" aria-label="Scegli anno">${years.map((yr,i)=>`<button type="button" class="sf-pill" data-trend-index="${i}" aria-pressed="${S.trendIndex===i}" aria-label="Anno ${yr}, quota top dieci per cento ${v[i]} per cento">${yr}</button>`).join('')}</div>`;
+  const selected=v[S.trendIndex];$('#trendInsight').innerHTML=`<strong>${selected}%</strong><span>Quota <b>simulata</b> del top 10% nel ${years[S.trendIndex]}, riferita a ${S.trendMetric==='wealth'?'patrimonio':'reddito'} nella popolazione inventata. Non è una serie italiana.</span>`;
+  const t=$('#trendTable');t.innerHTML='<table class="sf-table"><caption>Serie temporale sintetica: quota del top 10%</caption><thead><tr><th scope="col">Anno</th><th scope="col">Quota (%)</th></tr></thead><tbody>'+years.map((yr,i)=>`<tr><th scope="row">${yr}</th><td>${v[i]}%</td></tr>`).join('')+'</tbody></table>';t.classList.toggle('sf-hidden',!S.trendTable);$('#trendTableToggle').setAttribute('aria-pressed',String(S.trendTable));$('#trendTableToggle').textContent=S.trendTable?'NASCONDI TABELLA':'MOSTRA TABELLA';syncUrl();
+ }
+ const chooser={
+  distribution:{id:'V01 / V05 / V09 / V10',title:'CHI POSSIEDE COSA?',description:'Ranked bars, curva di Lorenz, beeswarm o istogramma. Scegli in base al fatto che tu voglia confrontare quote, concentrazione o dispersione.',tip:'Non confondere media, mediana e quota.'},
+  flow:{id:'V06 / V07 / V08',title:'CHI SI MUOVE?',description:'Matrice di transizione, alluvial o 100 dots. Il punto critico è preservare il denominatore di origine.',tip:'Le percentuali condizionali non sono volumi di popolazione.'},
+  change:{id:'V03 / V04 / V13',title:'COSA CAMBIA NEL TEMPO?',description:'Trend line, slope chart o small multiples. Annotare anni e discontinuità nei dati.',tip:'Confrontare coorti omogenee: anni diversi possono usare definizioni differenti.'},
+  relation:{id:'V11 / V12 / V15',title:'QUALI RELAZIONI EMERGONO?',description:'Scatterplot, geografie e bande di incertezza. Un legame visivo non identifica necessariamente una causa.',tip:'Correlazione non equivale a effetto causale.'}
+ };
+ function renderChooser(){ $$('#chooserControls button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.chooser===S.chooser)));const c=chooser[S.chooser];$('#chooserDetail').innerHTML=`<div class="sf-meta">${escapeHtml(c.id)}</div><h4 style="font:400 clamp(1.7rem,3vw,2.5rem)/1 var(--sf-type-display);margin:15px 0 11px">${escapeHtml(c.title)}</h4><p style="font-size:15px;line-height:1.45">${escapeHtml(c.description)}</p><div class="sf-meta" style="border-top:2px solid;padding-top:12px">ATTENZIONE: ${escapeHtml(c.tip)}</div>`;}
+ function renderAll(){renderRank();renderMatrix();renderTrend();renderChooser();}
+ function bind(){
+  $$('.rank-metric').forEach(b=>b.addEventListener('click',()=>{S.rankMetric=b.dataset.metric;renderRank()}));
+  $('#rankView').addEventListener('click',e=>{const b=e.target.closest('[data-decile]');if(b){S.rankSelected=Number(b.dataset.decile);renderRank()}});
+  $('#rankReset').addEventListener('click',()=>{S.rankMetric='wealth';S.rankSelected=9;renderRank();note('#rankFeedback','IMPOSTAZIONE INIZIALE RIPRISTINATA.');});
+  $('#rankTableToggle').addEventListener('click',()=>{S.rankTable=!S.rankTable;renderRank()});
+  $('#rankCsv').addEventListener('click',()=>exportCsv('schiaffo_decili_DEMO.csv',[['Decile','Quota (%)','Metrica','Dataset'],...rankData().map((v,i)=>[i+1,v,S.rankMetric,'SINTETICO'])],'#rankFeedback'));
+  $('#rankLink').addEventListener('click',()=>copyLink('#rankFeedback'));
+  $('#originSelect').addEventListener('change',e=>{S.origin=Number(e.target.value);renderMatrix()});
+  $('#matrixView').addEventListener('click',e=>{const b=e.target.closest('[data-row]');if(b){S.origin=Number(b.dataset.row);S.dest=Number(b.dataset.col);renderMatrix();}});
+  $('#matrixView').addEventListener('keydown',e=>{const b=e.target.closest('[data-row]');if(!b||!['ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key))return;e.preventDefault();let row=Number(b.dataset.row),col=Number(b.dataset.col);if(e.key==='ArrowDown')row=(row+1)%5;if(e.key==='ArrowUp')row=(row+4)%5;if(e.key==='ArrowRight')col=(col+1)%5;if(e.key==='ArrowLeft')col=(col+4)%5;S.origin=row;S.dest=col;renderMatrix();$(`#matrixView [data-row="${row}"][data-col="${col}"]`).focus();});
+  $('#matrixReset').addEventListener('click',()=>{S.origin=0;S.dest=4;renderMatrix();note('#matrixFeedback','IMPOSTAZIONE INIZIALE RIPRISTINATA.');});
+  $('#matrixTableToggle').addEventListener('click',()=>{S.matrixTable=!S.matrixTable;renderMatrix()});
+  $('#matrixCsv').addEventListener('click',()=>exportCsv('schiaffo_matrice_DEMO.csv',[['Origine','Destinazione','Probabilità (%)','Dataset'],...D.mobilityConditionalPercent.flatMap((row,i)=>row.map((v,j)=>[roman[i],roman[j],v,'SINTETICO']))],'#matrixFeedback'));
+  $('#matrixLink').addEventListener('click',()=>copyLink('#matrixFeedback'));
+  $$('.trend-metric').forEach(b=>b.addEventListener('click',()=>{S.trendMetric=b.dataset.trend;renderTrend()}));
+  $('#trendPlot').addEventListener('click',e=>{const b=e.target.closest('[data-trend-index]');if(b){S.trendIndex=Number(b.dataset.trendIndex);renderTrend()}});
+  $('#trendReset').addEventListener('click',()=>{S.trendMetric='income';S.trendIndex=D.trend.years.length-1;renderTrend();note('#trendFeedback','IMPOSTAZIONE INIZIALE RIPRISTINATA.');});
+  $('#trendTableToggle').addEventListener('click',()=>{S.trendTable=!S.trendTable;renderTrend()});
+  $('#trendCsv').addEventListener('click',()=>exportCsv('schiaffo_trend_DEMO.csv',[['Anno','Quota top 10 (%)','Metrica','Dataset'],...D.trend.years.map((yr,i)=>[yr,trendValues()[i],S.trendMetric,'SINTETICO'])],'#trendFeedback'));
+  $('#trendLink').addEventListener('click',()=>copyLink('#trendFeedback'));
+  $$('#chooserControls button').forEach(b=>b.addEventListener('click',()=>{S.chooser=b.dataset.chooser;renderChooser()}));
+  $('#tryPrimary').addEventListener('click',()=>note('#componentFeedback','AZIONE PRINCIPALE: CONFERMATA. FEEDBACK IMMEDIATO.'));
+  $('#trySecondary').addEventListener('click',()=>note('#componentFeedback','NOTA: QUESTO È UN COMPONENTE DEMO CON STATO REALE.'));
+  $$('[data-sample-view]').forEach(b=>b.addEventListener('click',()=>{$$('[data-sample-view]').forEach(el=>el.setAttribute('aria-pressed',String(el===b)));note('#sampleSelection','VISTA SELEZIONATA: '+b.dataset.sampleView.toUpperCase())}));
+  window.addEventListener('popstate',updateStateFromUrl);
+ }
+ function validate(){
+  if(!D||!D.synthetic)throw Error('Il demo deve dichiarare synthetic=true');
+  if(D.decileIncomeShare.reduce((a,b)=>a+b,0)!==100||D.decileWealthShare.reduce((a,b)=>a+b,0)!==100)throw Error('Quote per decile non sommano a 100');
+  if(D.mobilityConditionalPercent.some(row=>row.reduce((a,b)=>a+b,0)!==100))throw Error('Righe della matrice non sommano a 100');
+ }
+ try{validate();bind();renderAll()}catch(err){console.error(err);const main=$('#grafici');main.insertAdjacentHTML('afterbegin',`<div class="sf-error"><strong>Errore dati dimostrativi:</strong> ${escapeHtml(err.message)}</div>`)}
+})();
+
+</script>
+</body>
+</html>
