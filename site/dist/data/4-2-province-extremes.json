@@ -1,0 +1,148 @@
+{
+  "title": "Valori pubblicati per le dieci province con mobilità più alta e più bassa fra le 50 più popolose.",
+  "source": "Acciari, Polo e Violante (2022), tabelle 15 e 16.",
+  "sourceUrl": "https://violante.economics.princeton.edu/sites/g/files/toruqf5621/files/documents/acciari-et-al-2022-and-yet-it-moves-intergenerational-mobility-in-italy.pdf",
+  "unit": "punteggio da 0 a 1; valori più alti indicano un rango medio dei figli più alto",
+  "values": [
+    {
+      "name": "Bolzano",
+      "region": "Trentino-Alto Adige",
+      "group": "Tra le più alte",
+      "aum": 0.574,
+      "q1q5": 0.282
+    },
+    {
+      "name": "Monza-Brianza",
+      "region": "Lombardia",
+      "group": "Tra le più alte",
+      "aum": 0.545,
+      "q1q5": 0.204
+    },
+    {
+      "name": "Bergamo",
+      "region": "Lombardia",
+      "group": "Tra le più alte",
+      "aum": 0.544,
+      "q1q5": 0.2
+    },
+    {
+      "name": "Treviso",
+      "region": "Veneto",
+      "group": "Tra le più alte",
+      "aum": 0.541,
+      "q1q5": 0.183
+    },
+    {
+      "name": "Milano",
+      "region": "Lombardia",
+      "group": "Tra le più alte",
+      "aum": 0.539,
+      "q1q5": 0.224
+    },
+    {
+      "name": "Trento",
+      "region": "Trentino-Alto Adige",
+      "group": "Tra le più alte",
+      "aum": 0.534,
+      "q1q5": 0.198
+    },
+    {
+      "name": "Vicenza",
+      "region": "Veneto",
+      "group": "Tra le più alte",
+      "aum": 0.533,
+      "q1q5": 0.167
+    },
+    {
+      "name": "Venezia",
+      "region": "Veneto",
+      "group": "Tra le più alte",
+      "aum": 0.53,
+      "q1q5": 0.156
+    },
+    {
+      "name": "Padova",
+      "region": "Veneto",
+      "group": "Tra le più alte",
+      "aum": 0.53,
+      "q1q5": 0.168
+    },
+    {
+      "name": "Modena",
+      "region": "Emilia-Romagna",
+      "group": "Tra le più alte",
+      "aum": 0.529,
+      "q1q5": 0.198
+    },
+    {
+      "name": "Trapani",
+      "region": "Sicilia",
+      "group": "Tra le più basse",
+      "aum": 0.393,
+      "q1q5": 0.085
+    },
+    {
+      "name": "Cagliari",
+      "region": "Sardegna",
+      "group": "Tra le più basse",
+      "aum": 0.392,
+      "q1q5": 0.082
+    },
+    {
+      "name": "Salerno",
+      "region": "Campania",
+      "group": "Tra le più basse",
+      "aum": 0.39,
+      "q1q5": 0.086
+    },
+    {
+      "name": "Agrigento",
+      "region": "Sicilia",
+      "group": "Tra le più basse",
+      "aum": 0.381,
+      "q1q5": 0.071
+    },
+    {
+      "name": "Messina",
+      "region": "Sicilia",
+      "group": "Tra le più basse",
+      "aum": 0.379,
+      "q1q5": 0.08
+    },
+    {
+      "name": "Reggio Calabria",
+      "region": "Calabria",
+      "group": "Tra le più basse",
+      "aum": 0.377,
+      "q1q5": 0.086
+    },
+    {
+      "name": "Siracusa",
+      "region": "Sicilia",
+      "group": "Tra le più basse",
+      "aum": 0.376,
+      "q1q5": 0.078
+    },
+    {
+      "name": "Catania",
+      "region": "Sicilia",
+      "group": "Tra le più basse",
+      "aum": 0.376,
+      "q1q5": 0.078
+    },
+    {
+      "name": "Palermo",
+      "region": "Sicilia",
+      "group": "Tra le più basse",
+      "aum": 0.373,
+      "q1q5": 0.076
+    },
+    {
+      "name": "Cosenza",
+      "region": "Calabria",
+      "group": "Tra le più basse",
+      "aum": 0.363,
+      "q1q5": 0.077
+    }
+  ]
+}
