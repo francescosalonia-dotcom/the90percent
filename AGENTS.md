@@ -38,3 +38,22 @@ A ogni nuova vista: fornire (1) screenshot desktop/mobile o resoconto dei limiti
 ## Canonical project workspace
 - The source of truth for this project is https://github.com/francescosalonia-dotcom/the90percent. Perform project code and design work in this repository, not in the local `The 90%` artifact folder.
 - Before implementation, inspect this repository's current branch and application structure. Do not treat generated local output as source code.
+
+## Logo ufficiale — The 90 Percent
+
+### Asset canonico
+
+L'unico logo autorizzato per The 90 Percent è **[the-90-percent-logo.svg](design-system/assets/the-90-percent-logo.svg)**. Questo SVG è la componente ufficiale del progetto: riutilizzarlo direttamente ogni volta che serve il logo.
+
+Il lockup ha il wordmark a sinistra e il segno geometrico a destra: nove quadrati blu oltremare in una matrice 3×3 e un quadrato giallo acido separato, allineato alla riga inferiore. Le dieci forme sono parte integrante del segno.
+
+### Regole d'uso
+
+- Usare sempre il file SVG canonico, senza ridisegnarlo o sostituirlo con altre proposte o versioni precedenti.
+- Non cambiare ordine, posizione, distanza o proporzioni tra wordmark e matrice; non isolare la matrice né il wordmark come logo autonomo.
+- Non alterare colori, caratteri, spaziatura, forme, orientamento o rapporto d'aspetto. Non applicare filtri, maschere, ombre o ritagli.
+- Ridimensionare proporzionalmente e caricare i font SCHIAFFO previsti (Archivo Black e DM Mono). Preferire superfici carta o chiare, che mantengono il contrasto originale.
+- Nelle interfacce usare l'SVG come asset condiviso, per esempio: <img src="/design-system/assets/the-90-percent-logo.svg" alt="The 90 Percent">.
+- Se il lockup non entra nello spazio disponibile, omettere il marchio: non creare una variante compatta o alternativa.
+
+Qualunque uso del logo del progetto deve quindi puntare a questo asset e a nessun'altra variante.
