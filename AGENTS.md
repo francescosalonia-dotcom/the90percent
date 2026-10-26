@@ -35,6 +35,18 @@ A ogni nuova vista: fornire (1) screenshot desktop/mobile o resoconto dei limiti
 - [ ] Tabella e CSV coerenti con i numeri del grafico
 - [ ] Stati caricamento/vuoto/errore e origine dei dati espliciti
 
+## Fonti ufficiali e flusso GitHub/Vercel
+
+- Le sole fonti ufficiali del progetto sono queste istruzioni, il repository [GitHub](https://github.com/francescosalonia-dotcom/the90percent) e il progetto [Vercel](https://vercel.com/fss-88/the90percent).
+- Non usare pagine interne di GPT, cartelle locali o file generati fuori dal repository per stabilire quale sia il codice, il contenuto o la versione pubblicata. Il workspace locale non è collegato al progetto e non è una fonte di verità.
+- Il branch predefinito del repository GitHub è `main` (verificato il 26 ottobre 2026). L'ultimo deployment Vercel con target `production` verificato il 26 ottobre 2026 proviene dal branch `codex/canonical-logo-site`, commit `0670d338218e1a50368895d400ed4b63c213bda2`. Questo identifica il sorgente dell'ultimo deployment osservato; non dimostra da solo quale branch sia impostato come production branch nelle impostazioni Vercel.
+- Prima di ogni modifica, verifica il repository, il branch di partenza, la destinazione Vercel e il production branch configurato nel progetto. Non dedurre il production branch dal branch predefinito GitHub o dal branch di un singolo deployment. Se l'impostazione non è accessibile, segnala il limite e non dichiarare verificato il branch di produzione.
+- Per ogni modifica al progetto, lavora in un branch dedicato `codex/<descrizione-breve>` e apri una pull request verso il production branch configurato in Vercel. Non inviare modifiche direttamente al branch di produzione.
+- Controlla l'anteprima Vercel collegata alla pull request e gli eventuali controlli automatici. Quando l'anteprima è pronta e i controlli sono superati, integra la pull request secondo le regole GitHub del repository.
+- Dopo l'integrazione, verifica su Vercel un deployment `READY` con target `production` che corrisponda al commit integrato. Se il collegamento automatico GitHub–Vercel non pubblica quel commit, usa il flusso di pubblicazione Vercel del progetto per distribuire proprio quel commit.
+- Il lavoro è concluso solo dopo aver verificato sia l'aggiornamento GitHub sia la pubblicazione Vercel. In caso di errore, permessi mancanti o mismatch tra repository, branch, commit e deployment, fermati e descrivi con precisione cosa è riuscito e cosa resta da fare. Non dichiarare mai un deploy completato senza conferma di Vercel.
+- Aggiorna subito GitHub e poi Vercel per ogni codice, contenuto o asset prodotto per il progetto; non lasciare la versione finale soltanto nel workspace locale.
+
 ## Canonical project workspace
 - The source of truth for this project is https://github.com/francescosalonia-dotcom/the90percent. Perform project code and design work in this repository, not in the local `The 90%` artifact folder.
 - Before implementation, inspect this repository's current branch and application structure. Do not treat generated local output as source code.
