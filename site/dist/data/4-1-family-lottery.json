@@ -32,7 +32,7 @@
     "is_model_adjusted": false
   },
   "top20_probability_ratio": {
-    "value": 33.49 / 11.15,
+    "value": 3.0035874439461885,
     "unit": "ratio",
     "source": "Calcolo da Acciari, Polo e Violante (2022), tavola 4",
     "source_url": "https://doi.org/10.1257/app.20210151",
@@ -99,7 +99,7 @@
       "is_model_adjusted": false
     },
     "ratio": {
-      "value": 26.25 / 4.16,
+      "value": 6.310096153846154,
       "unit": "ratio",
       "source": "Calcolo da Acciari, Polo e Violante (2022), tavola 5",
       "source_url": "https://doi.org/10.1257/app.20210151",
