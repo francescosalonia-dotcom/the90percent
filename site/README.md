@@ -1,14 +1,15 @@
 # The 90 Percent — sito
 
-Questa cartella conserva su GitHub il codice statico del sito The 90 Percent.
+Questa cartella contiene nel repository GitHub i file statici del sito The 90 Percent, pubblicati tramite il progetto Vercel collegato.
 
 ## Struttura
 
-- `dist/`: pagine HTML, foglio di stile e script del sito.
+- `dist/`: pagine HTML, foglio di stile, script, dati e asset pubblicati.
 - Le pagine includono home, temi, manifesto, metodo, policy e il dossier sulla lotteria della famiglia.
+- Il progetto Vercel usa `site/dist` come Root Directory.
 
 Il sito è costruito attorno al progetto di **data-driven policy making**: ricerca e dati di qualità vengono resi accessibili e tradotti in proposte di policy per ridurre le disuguaglianze in Italia e in Europa.
 
-Il sistema visivo di riferimento è documentato in [design-system/](../design-system/). La versione pubblicata tramite Codex Sites è attualmente disponibile all'indirizzo [the-90-percent.brightquail20.chatgpt.site](https://the-90-percent.brightquail20.chatgpt.site).
+Il sistema visivo di riferimento è documentato in [design-system/](../design-system/). GitHub è la fonte del codice; il progetto [Vercel](https://vercel.com/fss-88/the90percent) pubblica il branch `main` sui domini di produzione.
 
-Questa cartella è la copia documentale del sito nel repository GitHub; il flusso di pubblicazione Codex Sites è gestito separatamente.
+Ogni modifica al sito va integrata nel repository e verificata su Vercel. Non esistono flussi di pubblicazione alternativi per questo progetto.
