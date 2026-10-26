@@ -45,3 +45,9 @@
 .chart-data .mobility-table{min-width:0}
 .chart-csv{display:inline-block;margin:3px 0 8px;font:500 10px var(--sf-type-mono);color:var(--sf-color-ultramarine);text-underline-offset:3px}
 @media(max-width:620px){.rank-points{grid-template-columns:1fr}.rank-point-card{padding:21px 18px}.rank-point-card+.rank-point-card{border-left:0;border-top:1px solid #aaa69c}.rank-point-card>strong{font-size:52px}.rank-scale{margin:13px 20px 0}.rank-scale-caption{margin:4px 18px 15px;font-size:8px}.rank-indicator{grid-template-columns:78px 1fr;gap:12px;padding:16px}.rank-indicator>strong{font-size:34px}.rank-indicator p{font-size:11px}.dispersion-panel{grid-template-columns:1fr}.quartile-ranges{padding:20px 14px;gap:20px}.range-row{grid-template-columns:76px 1fr;gap:10px}.range-row>p{font-size:12px}.range-row>p strong{font-size:21px}.range-people{gap:7px}.range-people i{width:20px;height:20px}.chart-data{padding-inline:14px}.chart-data .mobility-table{font-size:9px}.chart-data .mobility-table thead th{padding:8px 4px}}
+/* Scala autonoma per ciascun gruppo familiare. */
+.rank-point-scale{grid-column:1/-1;display:flex;justify-content:space-between;margin:-5px 0 0;font:400 9px var(--sf-type-mono);color:var(--sf-color-muted)}
+.rank-point-card>strong>b{font-weight:400}
+.rank-point-card>small{margin-top:1px}
+.rank-scale{display:none}
+@media(max-width:620px){.rank-point-scale{margin-top:-5px;font-size:8px}}
