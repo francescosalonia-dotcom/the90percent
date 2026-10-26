@@ -33,7 +33,7 @@
 .quartile-ranges{display:grid;gap:22px}
 .range-row{grid-template-columns:78px 1fr;gap:16px;margin:0;align-items:center}
 .range-people{display:flex;gap:8px;align-items:center;justify-content:center;padding:10px 5px}
-.range-people i{display:block;width:15px;height:15px;border:2px solid var(--sf-color-ink);border-radius:50%;background:transparent}
+.range-people i{display:block;width:21px;height:21px;border:2px solid var(--sf-color-ink);border-radius:50%;background:transparent}
 .range-people i.is-filled{background:var(--sf-color-orange)}
 .range-row>p{font-size:14px;line-height:1.45;margin:0}
 .range-row>p strong{display:block;font:400 24px/1.1 var(--sf-type-display);margin-bottom:5px}
@@ -44,4 +44,4 @@
 .chart-data .matrix-scroll{padding:0 0 12px}
 .chart-data .mobility-table{min-width:0}
 .chart-csv{display:inline-block;margin:3px 0 8px;font:500 10px var(--sf-type-mono);color:var(--sf-color-ultramarine);text-underline-offset:3px}
-@media(max-width:620px){.rank-points{grid-template-columns:1fr}.rank-point-card{padding:21px 18px}.rank-point-card+.rank-point-card{border-left:0;border-top:1px solid #aaa69c}.rank-point-card>strong{font-size:52px}.rank-scale{margin:13px 20px 0}.rank-scale-caption{margin:4px 18px 15px;font-size:8px}.rank-indicator{grid-template-columns:78px 1fr;gap:12px;padding:16px}.rank-indicator>strong{font-size:34px}.rank-indicator p{font-size:11px}.dispersion-panel{grid-template-columns:1fr}.quartile-ranges{padding:20px 14px;gap:20px}.range-row{grid-template-columns:76px 1fr;gap:10px}.range-row>p{font-size:12px}.range-row>p strong{font-size:21px}.range-people{gap:6px}.range-people i{width:14px;height:14px}.chart-data{padding-inline:14px}.chart-data .mobility-table{font-size:9px}.chart-data .mobility-table thead th{padding:8px 4px}}
+@media(max-width:620px){.rank-points{grid-template-columns:1fr}.rank-point-card{padding:21px 18px}.rank-point-card+.rank-point-card{border-left:0;border-top:1px solid #aaa69c}.rank-point-card>strong{font-size:52px}.rank-scale{margin:13px 20px 0}.rank-scale-caption{margin:4px 18px 15px;font-size:8px}.rank-indicator{grid-template-columns:78px 1fr;gap:12px;padding:16px}.rank-indicator>strong{font-size:34px}.rank-indicator p{font-size:11px}.dispersion-panel{grid-template-columns:1fr}.quartile-ranges{padding:20px 14px;gap:20px}.range-row{grid-template-columns:76px 1fr;gap:10px}.range-row>p{font-size:12px}.range-row>p strong{font-size:21px}.range-people{gap:7px}.range-people i{width:20px;height:20px}.chart-data{padding-inline:14px}.chart-data .mobility-table{font-size:9px}.chart-data .mobility-table thead th{padding:8px 4px}}
