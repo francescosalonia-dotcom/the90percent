@@ -20,8 +20,7 @@ Applicare queste istruzioni a ogni pagina, componente, grafico, test ed esportaz
 - Un'interazione primaria per grafico; progressive disclosure per secondarie. Niente autoplay essenziale e niente gating della storia dietro gesti complessi.
 
 ## Gerarchia tecnica
-- `tokens.json` è la fonte dei colori, dei font e delle scale. `src/styles/tokens.css` è generato da `node scripts/generate-css.mjs`.
-- Per scegliere visualizzazioni leggere `docs/DATA_VIZ.md`; per UX `docs/INTERACTIONS.md`; per definizioni economiche `docs/DATA_ETHICS.md`.
+- Prima di sviluppare interfacce o data visualization, consulta questa guida, `design-system/SCHIAFFO_DATA_VIZ.md` e la preview `design-system/SCHIAFFO_PREVIEW.html` (con `design-system/SCHIAFFO_ANTEPRIMA.png` come riferimento statico). La preview è un riferimento, non una libreria di componenti pronta all'uso. Questa consegna non include token/componenti autonomi, `INTERACTIONS.md`, `DATA_ETHICS.md` o un archivio ZIP: non presumere che esistano. Se il repository introduce un sistema di token o componenti, consulta e riusa quello prima di aggiungere nuove definizioni.
 - Se i vincoli divergono, preferire correttezza statistica e accessibilità rispetto all'impatto estetico; documentare ogni eccezione con commento `SCHIAFFO-EXCEPTION:`.
 
 ## Output richiesto a Codex
