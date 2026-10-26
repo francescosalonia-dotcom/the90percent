@@ -1,0 +1,257 @@
+{
+  "dataset": "italian_intergenerational_mobility_1979_1983",
+  "locale": "it-IT",
+  "geography": "Italia",
+  "population": {
+    "matched_records": 1719483,
+    "children_birth_cohorts": "1979–1983",
+    "parents_income_years": "1998–2000",
+    "children_income_years": "2016–2018",
+    "parent_unit": "reddito lordo congiunto dei genitori",
+    "child_unit": "reddito lordo individuale del figlio"
+  },
+  "study": {
+    "authors": "Acciari, Polo e Violante",
+    "year": 2022,
+    "title": "And Yet It Moves: Intergenerational Mobility in Italy",
+    "journal": "American Economic Journal: Applied Economics",
+    "doi": "10.1257/app.20210151",
+    "source_url": "https://doi.org/10.1257/app.20210151",
+    "pdf_url": "https://violante.economics.princeton.edu/sites/g/files/toruqf5621/files/documents/acciari-et-al-2022-and-yet-it-moves-intergenerational-mobility-in-italy.pdf"
+  },
+  "top20_by_parent_quintile": {
+    "value": [11.15, 14.34, 18.50, 22.51, 33.49],
+    "unit": "percent",
+    "source": "Acciari, Polo e Violante (2022), tavola 4",
+    "source_url": "https://doi.org/10.1257/app.20210151",
+    "population": "figli nati 1979–1983 in Italia, collegati ai redditi dei genitori",
+    "period": "redditi genitori 1998–2000; redditi figli 2016–2018",
+    "notes": "Probabilità condizionata di trovarsi nel quintile superiore del reddito individuale, per quintile di reddito congiunto lordo dei genitori.",
+    "is_observed": true,
+    "is_derived": false,
+    "is_model_adjusted": false
+  },
+  "top20_probability_ratio": {
+    "value": 3.0035874439461885,
+    "unit": "ratio",
+    "source": "Calcolo da Acciari, Polo e Violante (2022), tavola 4",
+    "source_url": "https://doi.org/10.1257/app.20210151",
+    "population": "stessa della matrice quintile",
+    "period": "stessi periodi della matrice quintile",
+    "notes": "Rapporto tra la probabilità Q5→Q5 e Q1→Q5.",
+    "is_observed": false,
+    "is_derived": true,
+    "is_model_adjusted": false
+  },
+  "quintile_matrix": {
+    "value": [
+      [28.90, 24.54, 19.46, 15.95, 11.15],
+      [21.74, 22.15, 21.69, 20.08, 14.34],
+      [18.32, 19.99, 21.27, 21.92, 18.50],
+      [15.96, 18.05, 20.85, 22.63, 22.51],
+      [15.08, 15.27, 16.73, 19.42, 33.49]
+    ],
+    "unit": "percent",
+    "source": "Acciari, Polo e Violante (2022), tavola 4",
+    "source_url": "https://doi.org/10.1257/app.20210151",
+    "population": "figli nati 1979–1983 in Italia, classificati per reddito individuale",
+    "period": "reddito congiunto lordo genitori 1998–2000; reddito individuale figli 2016–2018",
+    "notes": "Righe e colonne vanno dal quintile I (più basso) al quintile V (più alto). Ogni riga è una distribuzione condizionata; differenze minime nelle somme derivano dagli arrotondamenti pubblicati.",
+    "is_observed": true,
+    "is_derived": false,
+    "is_model_adjusted": false
+  },
+  "independence_benchmark": {
+    "value": [20, 20, 20, 20, 20],
+    "unit": "percent",
+    "source": "Benchmark matematico teorico",
+    "source_url": "https://doi.org/10.1257/app.20210151",
+    "population": "non è una popolazione osservata",
+    "period": "non applicabile",
+    "notes": "Distribuzione uniforme per ogni origine se origine e destinazione fossero indipendenti. Non è una stima osservata.",
+    "is_observed": false,
+    "is_derived": false,
+    "is_model_adjusted": false
+  },
+  "decile_transitions": {
+    "bottom10_to_top10": {
+      "value": 4.16,
+      "unit": "percent",
+      "source": "Acciari, Polo e Violante (2022), tavola 5",
+      "source_url": "https://doi.org/10.1257/app.20210151",
+      "population": "figli classificati per decile del reddito parentale e proprio",
+      "period": "genitori 1998–2000; figli 2016–2018",
+      "notes": "Quota di figli nel decile inferiore dei genitori che si trova nel decile superiore.",
+      "is_observed": true,
+      "is_derived": false,
+      "is_model_adjusted": false
+    },
+    "top10_to_top10": {
+      "value": 26.25,
+      "unit": "percent",
+      "source": "Acciari, Polo e Violante (2022), tavola 5",
+      "source_url": "https://doi.org/10.1257/app.20210151",
+      "population": "figli classificati per decile del reddito parentale e proprio",
+      "period": "genitori 1998–2000; figli 2016–2018",
+      "notes": "Quota di figli nel decile superiore dei genitori che si trova nel decile superiore.",
+      "is_observed": true,
+      "is_derived": false,
+      "is_model_adjusted": false
+    },
+    "ratio": {
+      "value": 6.310096153846154,
+      "unit": "ratio",
+      "source": "Calcolo da Acciari, Polo e Violante (2022), tavola 5",
+      "source_url": "https://doi.org/10.1257/app.20210151",
+      "population": "stessa della tavola 5",
+      "period": "stessi periodi della tavola 5",
+      "notes": "Rapporto tra persistenza nel decile superiore e mobilità dal decile inferiore a quello superiore.",
+      "is_observed": false,
+      "is_derived": true,
+      "is_model_adjusted": false
+    }
+  },
+  "rank_rank_slope": {
+    "value": 0.22,
+    "unit": "rank-rank slope",
+    "source": "Acciari, Polo e Violante (2022)",
+    "source_url": "https://doi.org/10.1257/app.20210151",
+    "population": "figli nati 1979–1983 in Italia",
+    "period": "genitori 1998–2000; figli 2016–2018",
+    "notes": "Pendenza della relazione tra percentile di reddito congiunto dei genitori e percentile del reddito individuale dei figli.",
+    "is_observed": true,
+    "is_derived": false,
+    "is_model_adjusted": false
+  },
+  "rank_r2": {
+    "value": 0.06,
+    "unit": "R²",
+    "source": "Acciari, Polo e Violante (2022)",
+    "source_url": "https://doi.org/10.1257/app.20210151",
+    "population": "figli nati 1979–1983 in Italia",
+    "period": "genitori 1998–2000; figli 2016–2018",
+    "notes": "Valore approssimativo riportato per la relazione rank-rank; non implica che il reddito sia privo di altre determinanti.",
+    "is_observed": true,
+    "is_derived": false,
+    "is_model_adjusted": false
+  },
+  "dispersion_quantiles": {
+    "value": [
+      {
+        "parent_percentile": 10,
+        "child_percentile": 60,
+        "share": 25,
+        "tail": "above"
+      },
+      {
+        "parent_percentile": 90,
+        "child_percentile": 35,
+        "share": 25,
+        "tail": "below"
+      }
+    ],
+    "unit": "percentile and percent",
+    "source": "Acciari, Polo e Violante (2022), figura 2 e testo",
+    "source_url": "https://doi.org/10.1257/app.20210151",
+    "population": "figli nella coorte analizzata, condizionati sul percentile parentale",
+    "period": "genitori 1998–2000; figli 2016–2018",
+    "notes": "Tra i figli di genitori intorno al 10° percentile, un quarto supera il 60° percentile; tra i figli di genitori intorno al 90°, un quarto finisce sotto il 35°.",
+    "is_observed": true,
+    "is_derived": false,
+    "is_model_adjusted": false
+  },
+  "robustness": [
+    {
+      "label": "Specificazione di base",
+      "rrs": 0.220,
+      "bottomToTop": 11.2,
+      "kind": "Riferimento pubblicato; valori di mobilità arrotondati.",
+      "is_model_adjusted": false,
+      "source": "Tavola 4"
+    },
+    {
+      "label": "Correzione per evasione",
+      "rrs": 0.260,
+      "bottomToTop": 10.2,
+      "kind": "Correzione dei redditi non dichiarati.",
+      "is_model_adjusted": true,
+      "source": "Analisi di robustezza"
+    },
+    {
+      "label": "Evasione e contribuenti mancanti",
+      "rrs": 0.246,
+      "bottomToTop": 10.0,
+      "kind": "Correzione con contribuenti non osservati e redditi non dichiarati.",
+      "is_model_adjusted": true,
+      "source": "Analisi di robustezza"
+    },
+    {
+      "label": "Correzione del ciclo di vita",
+      "rrs": 0.300,
+      "bottomToTop": 9.0,
+      "kind": "Aggiustamento per l'età in cui si osserva il reddito dei figli.",
+      "is_model_adjusted": true,
+      "source": "Analisi di robustezza"
+    }
+  ],
+  "robustness_metadata": {
+    "source": "Acciari, Polo e Violante (2022), analisi di robustezza",
+    "source_url": "https://doi.org/10.1257/app.20210151",
+    "population": "figli della coorte italiana studiata",
+    "period": "redditi genitori 1998–2000; redditi figli 2016–2018",
+    "notes": "Specificazioni e correzioni non sono stime perfettamente intercambiabili con il riferimento di base. Il bottom-to-top mostra la mobilità tra quintili estremi.",
+    "is_observed": false,
+    "is_derived": false,
+    "is_model_adjusted": true
+  },
+  "international_comparison": [
+    {
+      "country": "Danimarca",
+      "value": 0.18,
+      "unit": "rank-rank slope",
+      "source": "Acciari, Polo e Violante (2022), confronto internazionale",
+      "source_url": "https://doi.org/10.1257/app.20210151",
+      "notes": "Confronto indicativo; definizioni e metodi non sono perfettamente omogenei."
+    },
+    {
+      "country": "Italia",
+      "value": 0.22,
+      "unit": "rank-rank slope",
+      "source": "Acciari, Polo e Violante (2022), confronto internazionale",
+      "source_url": "https://doi.org/10.1257/app.20210151",
+      "notes": "Confronto indicativo; definizioni e metodi non sono perfettamente omogenei."
+    },
+    {
+      "country": "Stati Uniti",
+      "value": 0.34,
+      "unit": "rank-rank slope",
+      "source": "Acciari, Polo e Violante (2022), confronto internazionale",
+      "source_url": "https://doi.org/10.1257/app.20210151",
+      "notes": "Confronto indicativo; definizioni e metodi non sono perfettamente omogenei."
+    }
+  ],
+  "wealth_persistence": {
+    "value": {
+      "correlation_average": 0.31,
+      "age_adjusted": 0.24,
+      "sample_households": 336
+    },
+    "unit": "correlation",
+    "source": "Cannari e D'Alessio (2018), Banca d'Italia, Questioni di Economia e Finanza 476",
+    "source_url": "https://www.bancaditalia.it/pubblicazioni/qef/2018-0476/index.html",
+    "population": "336 nuclei familiari osservati in indagini ripetute",
+    "period": "indagini ripetute descritte nello studio",
+    "notes": "Coda secondaria sul patrimonio: campione limitato e correlazione media tra rilevazioni; la correzione per età la riduce.",
+    "is_observed": true,
+    "is_derived": false,
+    "is_model_adjusted": false
+  },
+  "limitations": [
+    "Associazione tra origine e destinazione non identifica causalità o meccanismi.",
+    "Il reddito dei genitori è congiunto e lordo; quello dei figli è individuale.",
+    "I figli appartengono a coorti specifiche e sono osservati in età adulta, non necessariamente a fine carriera.",
+    "Reddito e patrimonio sono misure diverse e non vanno confuse.",
+    "Le verifiche di robustezza affrontano alcuni problemi di misura, ma non eliminano tutti i limiti.",
+    "Il confronto internazionale è indicativo e i metodi non sono perfettamente omogenei."
+  ]
+}

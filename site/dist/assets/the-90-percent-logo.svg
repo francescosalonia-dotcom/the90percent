@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 240" role="img" aria-labelledby="title desc">
+<title id="title">The 90 Percent — matrice 3 per 3 con unità separata</title>
+<desc id="desc">A sinistra il wordmark THE 90 PERCENT; subito a destra una matrice 3 per 3 di nove quadrati blu e un quadrato giallo separato, allineato alla riga inferiore. Dieci unità in tutto.</desc>
+<g><rect x="205" y="43" width="46" height="46" fill="#3426C3" stroke="#171719" stroke-width="1.5"/><rect x="258" y="43" width="46" height="46" fill="#3426C3" stroke="#171719" stroke-width="1.5"/><rect x="311" y="43" width="46" height="46" fill="#3426C3" stroke="#171719" stroke-width="1.5"/><rect x="205" y="96" width="46" height="46" fill="#3426C3" stroke="#171719" stroke-width="1.5"/><rect x="258" y="96" width="46" height="46" fill="#3426C3" stroke="#171719" stroke-width="1.5"/><rect x="311" y="96" width="46" height="46" fill="#3426C3" stroke="#171719" stroke-width="1.5"/><rect x="205" y="149" width="46" height="46" fill="#3426C3" stroke="#171719" stroke-width="1.5"/><rect x="258" y="149" width="46" height="46" fill="#3426C3" stroke="#171719" stroke-width="1.5"/><rect x="311" y="149" width="46" height="46" fill="#3426C3" stroke="#171719" stroke-width="1.5"/><rect x="379" y="149" width="46" height="46" fill="#E2F33E" stroke="#171719" stroke-width="1.5"/></g>
+<g fill="#171719">
+<text x="48" y="61" font-family="DM Mono, monospace" font-size="18" letter-spacing="3">THE</text>
+<text x="43" y="157" font-family="Archivo Black, Impact, sans-serif" font-size="104" letter-spacing="-7">90</text>
+<text x="49" y="191" font-family="DM Mono, monospace" font-size="19" letter-spacing="4">PERCENT</text>
+</g></svg>
