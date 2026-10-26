@@ -53,7 +53,7 @@ Il lockup ha il wordmark a sinistra e il segno geometrico a destra: nove quadrat
 - Non cambiare ordine, posizione, distanza o proporzioni tra wordmark e matrice; non isolare la matrice né il wordmark come logo autonomo.
 - Non alterare colori, caratteri, spaziatura, forme, orientamento o rapporto d'aspetto. Non applicare filtri, maschere, ombre o ritagli.
 - Ridimensionare proporzionalmente e caricare i font SCHIAFFO previsti (Archivo Black e DM Mono). Preferire superfici carta o chiare, che mantengono il contrasto originale.
-- Nelle interfacce usare l'SVG come asset condiviso, per esempio: <img src="/design-system/assets/the-90-percent-logo.svg" alt="The 90 Percent">.
+- Nelle interfacce usare l'SVG come asset condiviso, per esempio: `<img src="/design-system/assets/the-90-percent-logo.svg" alt="The 90 Percent">`.
 - Se il lockup non entra nello spazio disponibile, omettere il marchio: non creare una variante compatta o alternativa.
 
 Qualunque uso del logo del progetto deve quindi puntare a questo asset e a nessun'altra variante.
